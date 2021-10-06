@@ -21,8 +21,8 @@ resource "azurerm_kubernetes_cluster" "cluster" {
 }
 
 # add the role to the identity the kubernetes cluster was assigned
-resource "azurerm_role_assignment" "kubweb_to_acr" {
-  scope                = "/subscriptions/140114da-9364-44dc-b985-edb523bc07b3/resourceGroups/RG-terraform/providers/Microsoft.ContainerRegistry/registries/chyregistry"
-  role_definition_name = "AcrPull"
-  principal_id         = azurerm_kubernetes_cluster.cluster.kubelet_identity[0].object_id
-}
+#resource "azurerm_role_assignment" "kubweb_to_acr" {
+#  scope                = "/subscriptions/140114da-9364-44dc-b985-edb523bc07b3/resourceGroups/RG-terraform/providers/Microsoft.ContainerRegistry/registries/chyregistry"
+#  role_definition_name = "AcrPull"
+#  principal_id         = azurerm_kubernetes_cluster.cluster.kubelet_identity[0].object_id
+#}
