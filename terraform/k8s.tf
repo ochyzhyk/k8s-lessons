@@ -3,7 +3,7 @@ resource "azurerm_kubernetes_cluster" "cluster" {
   location            = var.location
   resource_group_name = var.resource_group_name
   dns_prefix          = "ch-cluster1"
-  private_cluster_enabled = true
+  private_cluster_enabled = false
 
   default_node_pool {
     name       = "default"
