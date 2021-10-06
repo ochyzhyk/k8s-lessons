@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name : xyz-web
-          image: adv4000/k8sphp:latest
+          image: chyregistry.azurecr.io/adv4000/k8sphp:176
           ports:
             - containerPort: 80
 
