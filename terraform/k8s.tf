@@ -18,6 +18,11 @@ resource "azurerm_kubernetes_cluster" "cluster" {
   tags = {
     Environment = "Production"
   }
+
+  service_principal {
+    client_id = "161ce402-4d20-4310-9a1c-ee83a68a044e"
+    client_secret = "d-gHA.2-XmG0klf4jDjdjCdUwVz~Q_.jf~"
+  }
 }
 
 # add the role to the identity the kubernetes cluster was assigned
